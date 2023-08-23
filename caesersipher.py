@@ -1,8 +1,7 @@
 from caesersipher_ascii import *
-should_continue = True
-while should_continue == True:
+should_print = True
+while should_print == True:
     print(ascii_art)
-
     alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
     type = int(input("Enter 1 to Encrypt and 2 to Decrypt : "))
@@ -32,14 +31,13 @@ while should_continue == True:
                 print(letter,end="")
     
     def selection(t):
-    
         if t == 1 :
         
             print(f"Your Encrypted Code is : ")
             encryption(code,shift)
         elif t == 2 :
         
-            print(f"Your Decrypted code is : ")
+            print("Your Decrypted code is : ")
             decryption(code,shift)
         else:
             print("!!!You selected wrong option!!!")
@@ -47,10 +45,11 @@ while should_continue == True:
 
     selection(type)
 
-    start_again = input(" Type yes if you want to continue encoding decoding or no if you want to end the program").lower()
-if start_again == "no":
-        should_continue == False
-        print("Good Bye")
+    start_again = input("\n\n\nType yes to continue or No to stop Encoding Decoding ").lower()
+    if start_again == "no":
+        should_print = False
+        print("Good bye")  
+        print("Thanks for using")
     
     
     
